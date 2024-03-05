@@ -1,4 +1,4 @@
-console.log(tempData);
+//console.log(tempData);
 
 function objToCard(objPelicula){
     const {title, year, director, duration, rate, poster} = objPelicula
@@ -24,14 +24,19 @@ function objToCard(objPelicula){
     divCard.appendChild(puntuacion);
     divCard.appendChild(boton)
     divCard.classList.add('card')
-
+    
     return divCard;
 }
 
-const contenedor = document.getElementById('dealer1')
-const listaDeObj = tempData;
-const listaCards = listaDeObj.map(objToCard);
 
-listaCards.forEach(card =>{
-    contenedor.appendChild(card);
-})
+
+$.get("https://students-api.2.us-1.fl0.io/movies", (data)=>dataToCards(data))
+
+function dataToCards (data){
+    const contenedor = document.getElementById('dealer1')
+    const listaDeObj = data;
+    const listaCards = listaDeObj.map(objToCard);
+    listaCards.forEach(card =>{
+        contenedor.appendChild(card);
+    });
+}
