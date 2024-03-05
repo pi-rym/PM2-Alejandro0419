@@ -1,0 +1,98 @@
+/* Elimina margin y padding para todos los elementos */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+/* Establece fuente por defecto */
+body {
+ font-family: Arial, sans-serif;
+ line-height: 1.6;
+ color: #333;
+}
+
+/* Elimina underline y colores por defecto de los enlaces */
+a {
+ text-decoration: none;
+ color: #333;
+}
+
+/* Elimina espacio por defecto y bordes en los elementos de lista */
+ul, ol {
+ list-style-type: none;
+ padding: 0;
+}
+
+/* Elimina margen y border de los elementos de la tabla */
+table {
+ border-collapse: collapse;
+ width: 100%;
+}
+
+th, td {
+ text-align: left;
+ padding: 8px;
+}
+
+/* Establece tamaño y margen de las imágenes */
+img {
+ max-width: 100%;
+ height: auto;
+}
+
+/* Establece margen para los elementos del encabezado */
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 20px;
+ line-height: 1.2;
+}
+
+/* Establece margen para los elementos de la lista */
+li {
+ margin-bottom: 10px;
+}
+
+/* Elimina estilo de resaltado en elementos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+ outline: none;
+ border: 1px solid #ccc;
+ background: #fafafa;
+ padding: 10px;
+ font-size: 16px;
+ width: 100%;
+ box-sizing: border-box;
+ transition: border 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+ border: 1px solid #333;
+}
+
+/* Establece estilo para botones */
+button {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+ background: #333;
+ color: #fff;
+ padding: 10px 20px;
+ font-size: 16px;
+ border: none;
+ cursor: pointer;
+ transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+ background: #555;
+}
