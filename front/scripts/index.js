@@ -10,7 +10,7 @@ function objToCard(objPelicula){
 
     imagen.src = poster;
     titulo.textContent = title;
-    puntuacion.textContent = rate;
+    puntuacion.textContent = 'Puntuacion: ' + rate;
     boton.textContent ='Ver pelicula';
 
     imagen.classList.add('movieImg');
