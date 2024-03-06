@@ -1,34 +1,19 @@
-//console.log(tempData);
-
-function objToCard(objPelicula){
-    const {title, year, director, duration, rate, poster} = objPelicula
-
-    const imagen = document.createElement('img')
-    const titulo = document.createElement('h2')
-    const puntuacion = document.createElement('p')
-    const boton = document.createElement('button')
-
-    imagen.src = poster;
-    titulo.textContent = title;
-    puntuacion.textContent = 'Puntuacion: ' + rate;
-    boton.textContent ='Ver pelicula';
-
-    imagen.classList.add('movieImg');
-    titulo.classList.add('movieTitle');
-    puntuacion.classList.add('movieDesc');
-    boton.classList.add('movieBtn');
-    
+function objToCard(movie){
     const divCard = document.createElement('div');
-    divCard.appendChild(imagen);
-    divCard.appendChild(titulo);
-    divCard.appendChild(puntuacion);
-    divCard.appendChild(boton)
     divCard.classList.add('card')
-    
+    divCard.classList.add('bg-dark-subtle')
+
+    divCard.innerHTML =` <img src="${movie.poster}" alt="${movie.title}" class="card-img-top">
+    <div class="card-body bg-dark-subtle">
+    <h2 class="movieTitle m-3">${movie.title} (${movie.year})</h2>
+    <p class="card-text"><strong>Director: </strong> ${movie.director}</p>
+    <p class="card-text"><strong>Duracion: </strong> ${movie.duration}</p>
+    <p class="card-text"><strong>Género: </strong> ${movie.genre.join(', ')}</p>
+    <p class="card-text"><strong>Rate: </strong> ${movie.rate}</p>
+    </div>
+    `
     return divCard;
 }
-
-
 
 $.get("https://students-api.2.us-1.fl0.io/movies", (data)=>dataToCards(data))
 
