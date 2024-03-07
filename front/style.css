@@ -1,7 +1,7 @@
 body{ 
     width: 100%;
-    background: rgb(5,23,32);
-background: linear-gradient(132deg, rgba(5,23,32,1) 0%, rgba(1,42,74,1) 45%, rgba(1,73,124,1) 100%);
+    /* background: #03273C; */
+/* background: linear-gradient(132deg, rgba(5,23,32,1) 0%, rgba(1,42,74,1) 45%, rgba(1,73,124,1) 100%); */
 }
 a {
     text-decoration: none;
@@ -43,7 +43,7 @@ nav{
 }
 
 .movieImg{ /*imagen de la pelicula*/
-    max-width: 247px;
+    max-width: 300px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
