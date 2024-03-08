@@ -38,9 +38,11 @@ nav{
     margin-bottom: 50px;
     padding-bottom: 10px;
     align-content: baseline;
-
     /* background-color: #ffffffa9; */
 }
+/* .cardInfo:hover{
+    
+} */
 
 .movieImg{ /*imagen de la pelicula*/
     max-width: 300px;
