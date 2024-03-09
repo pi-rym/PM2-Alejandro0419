@@ -77,6 +77,31 @@ describe('La clase "CarritoCompra" debe: ', () => {
     const carrito = new CarritoCompra();
     carrito.agregarProducto({ nombre: "Milanesa", precio: 10, cantidad: 5 })
     carrito.agregarProducto({ nombre: "Zapallo", precio: 20, cantidad: 1 })
+    
     expect(carrito.calcularTotal()).toHaveReturnedWith(70);
   })
+  
+  
+  it('El metodo "aplicarDescuento" Aplica un descuento al total de la compra según el porcentaje especificado.', ()=>{
+    const carrito = new CarritoCompra();
+    carrito.agregarProducto({ nombre: "Milanesa", precio: 10, cantidad: 5 })
+    carrito.agregarProducto({ nombre: "Zapallo", precio: 20, cantidad: 1 })
+    expect(carrito.aplicarDescuento(50)).toHaveReturnedWith(35);
+  })
+  
+  it('El metodo "aplicarDescuento" Aplica un descuento al total de la compra según el porcentaje especificado.', ()=>{
+    const carrito = new CarritoCompra();
+    carrito.agregarProducto({ nombre: "Milanesa", precio: 10, cantidad: 5 })
+    carrito.agregarProducto({ nombre: "Zapallo", precio: 20, cantidad: 1 })
+    expect(carrito.aplicarDescuento(100)).toHaveReturnedWith(0);
+  })
+  
+  it('El metodo "aplicarDescuento" Aplica un descuento al total de la compra según el porcentaje especificado.', ()=>{
+    const carrito = new CarritoCompra();
+    carrito.agregarProducto({ nombre: "Milanesa", precio: 10, cantidad: 5 })
+    carrito.agregarProducto({ nombre: "Zapallo", precio: 20, cantidad: 1 })
+    expect(carrito.aplicarDescuento(0)).toHaveReturnedWith(70);
+  })
+
+  
 });
