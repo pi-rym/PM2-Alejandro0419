@@ -1,5 +1,5 @@
 class CarritoCompra{
-    //constructor(){    this.productos = [];}
+    constructor(){    this.productos = [];}
 }
 
 module.exports = CarritoCompra;
