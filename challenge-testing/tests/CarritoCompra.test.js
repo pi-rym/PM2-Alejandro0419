@@ -24,7 +24,10 @@ const CarritoCompra = require("./index");
 const mockCarroCompra = jest.fn(CarritoCompra); //hago mock del constructor para ver cuantas veces es llamado
 
 describe('La clase "CarritoCompra" debe: ', () => {
-  /*beforeEach(() => {
+  /*
+  let carrito;
+  beforeEach(() => {
+    carrito = new CarritoCompra
 });*/
   it("Deberia ser una clase", () => {
     expect(typeof mockCarroCompra.prototype.constructor).toBe("function");
