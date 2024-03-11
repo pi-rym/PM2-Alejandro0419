@@ -22,7 +22,9 @@ aplicarDescuento(descuento){
     });
 
     if(descuento === 0) return total;
-    let monto = (total - (descuento/100))
+
+    let monto = total - (total * (descuento/100))
+
     return monto;
   }
 }
