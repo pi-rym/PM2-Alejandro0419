@@ -3,7 +3,7 @@ const axios = require("axios");
 
 async function getMovies() {
   try {
-    const data = await axios.get("https://students-api.2.us-1.fl0.io/movies");
+    const data = await axios.get("https://students-api.up.railway.app/movies");
     dataToCards(data.data)
   } catch (error) {
     console.log("Ha ocurrido un error en la conexion a la api.")
