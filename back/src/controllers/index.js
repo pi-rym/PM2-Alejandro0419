@@ -5,8 +5,6 @@ const testController = (req, res) => {
     res.status(200).send("Estamos recibiendo una solicitud");
 };
 
-const moviesController = (req, res)=>{
-    res.status(200).send("Próximamente estarán disponibles los datos de peliculas...");
-}
 
-module.exports = {testController, moviesController};
+
+module.exports = {testController};
