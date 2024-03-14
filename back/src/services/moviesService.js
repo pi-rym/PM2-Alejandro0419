@@ -31,8 +31,18 @@ const movies = [
   },
 ];
 class Movie {
-  constructor(title, year, director, duration, genre, rate, poster) {
-    title: title; year: year; director:director; duration:duration; genre:genre; rate:rate; poster:poster;
+  constructor(movieData) {
+    if(!movieData.title|| !movieData.director || !movieData.poster ){
+      throw new Error("Ingrese el titulo, director y poster correspondiente")
+    }
+    
+    this.title = movieData.title;
+    this.year = movieData.year;
+    this.director = movieData.director;
+    this.duration = movieData.duration;
+    this.genre = movieData.genre;
+    this.rate = movieData.rate;
+    this.poster = movieData.poster;
   }
 }
 
@@ -40,7 +50,7 @@ module.exports = {
   //exporte un objeto donde cada propiedad será una función
   //Implementar en este módulo de servicio una función que retorne el mismo arreglo de 3 películas con el que estuvimos trabajando.
   getMovies: async () => {
-    return movies;//.map((movieData) => new Movie(movieData));
+    return movies.map((movieData) => new Movie(movieData));
   },
   createMovie: async (title, year, director, duration, genre, rate, poster) => {
     const newMovie = {
