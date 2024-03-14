@@ -3,7 +3,7 @@ const axios = require("axios");
 
 async function getMovies() {
   try {
-    const data = await axios.get("http/localhost/3000/movies");
+    const data = await axios.get("http://localhost:3000/movies");
     dataToCards(data.data)
   } catch (error) {
     console.log("Ha ocurrido un error en la conexion a la api.")

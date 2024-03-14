@@ -1,1 +1,1 @@
-//Aca voy a tener una funcion
+//Aca voy a tener una funcion que retorna los datos que necesite el controller
