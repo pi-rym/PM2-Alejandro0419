@@ -5,7 +5,7 @@ const cors = require("cors")
 
 const server = express(); // nuestro servidor vive aca
 
-server.use(morgan("dev"));
+server.use(morgan("dev")); //combined da mas informacion, para ver mas leer documentacion morgan 
 server.use(cors());
 server.use(express.json());
 
