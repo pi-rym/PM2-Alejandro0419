@@ -1,4 +1,4 @@
-const movies = [
+/* const movies = [
   {
     title: "Guardians of the Galaxy Vol. 2",
     year: 2017,
@@ -44,16 +44,24 @@ class Movie {
     this.rate = movieData.rate;
     this.poster = movieData.poster;
   }
-}
+} */
+const Movie = require("../models/Movie");
 
+module.exports= {
+  getMovies: async()=>{
+    console.log("esta entrando en getmovies");
+    const movies= await Movie.find();
+    return movies;
+  }
+}
 module.exports = {
   //exporte un objeto donde cada propiedad será una función
   //Implementar en este módulo de servicio una función que retorne el mismo arreglo de 3 películas con el que estuvimos trabajando.
-  getMovies: async () => {
+  /* getMovies: async () => {
     return movies.map((movieData) => new Movie(movieData));
-  },
-  createMovie: async (title, year, director, duration, genre, rate, poster) => {
-    const newMovie = {
+  }, */
+  createMovie: async () => {
+    /* const newMovie = {
       title,
       year,
       director,
@@ -62,6 +70,6 @@ module.exports = {
       rate,
       poster,
     };
-    movies.push(newMovie);
+    movies.push(newMovie); */
   },
 };
