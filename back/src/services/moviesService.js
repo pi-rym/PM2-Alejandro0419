@@ -48,20 +48,18 @@ class Movie {
 const Movie = require("../models/Movie");
 
 module.exports= {
-  getMovies: async()=>{
-    console.log("esta entrando en getmovies");
-    const movies= await Movie.find();
+  getMovies: async()=>{console.log("Entrando en getMovies");
+  try {
+    console.log("no pasa")
+    const movies = await Movie.find();
     return movies;
+  } catch (error) {
+    console.error("Error al obtener las películas:", error);
+    throw error; 
   }
-}
-module.exports = {
-  //exporte un objeto donde cada propiedad será una función
-  //Implementar en este módulo de servicio una función que retorne el mismo arreglo de 3 películas con el que estuvimos trabajando.
-  /* getMovies: async () => {
-    return movies.map((movieData) => new Movie(movieData));
-  }, */
+  },
   createMovie: async () => {
-    /* const newMovie = {
+    const newMovie = {
       title,
       year,
       director,
@@ -70,6 +68,6 @@ module.exports = {
       rate,
       poster,
     };
-    movies.push(newMovie); */
-  },
+    movies.push(newMovie); 
+  }
 };
