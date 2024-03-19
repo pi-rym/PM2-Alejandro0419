@@ -9,15 +9,20 @@ module.exports = {
             res.status(200).json(movies);
         } catch (error) {
             res.status(500).json({
-                error:"Error interno del servidor"
+                error:"Error interno del servidor - Llamado a movies"
             })
         }
     },
     createMovie: async (req,res) => {
-        const {title,year,director,duration,genre,rate,poster} = req.body;
-        await moviesService.createMovie(title,year,director,duration,genre,rate,poster);
-        res.status(201).json({
-            message: "Pelicula creada correctamente"
-        })
+        try {
+            const movie = req.body;
+            const newMovie = await moviesService.createMovie(movie);
+            res.status(201).json(newMovie);
+            
+        } catch (error) {
+            res.status(500).json({
+                error:"Error interno del servidor - Creacion de movie"
+            })
+        }
     }
 };

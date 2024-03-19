@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>Proyecto M2 Alejandro</title>
+    <title>Subir Pelicula</title>
   </head>
   <body class="text-white bg-dark px-4 py-5">
     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
@@ -27,10 +27,44 @@
         <span><a href="about.html">About Us</a></span>
         <span><a href="historia.html">Historia del cine</a></span>
         <span><a href="createMovie.html">Subir pelicula</a></span>
-        <!-- <span><a href="login.html">Iniciar Sesion / Registrarse</a></span> -->
+        <span><a href="login.html">Iniciar Sesion / Registrarse</a></span>
       </div>
     </nav>
-    <div class="dealer" id="dealer1"></div>
+    <div class="container">
+        <form>
+            <div class="mb-3 campoForm">
+              <label for="formTitle" class="form-label">Titulo</label>
+              <input type="text" class="form-control" id="formTitle" aria-describedby="">
+            </div>
+            <div class="mb-3 campoForm">
+              <label for="formYear" class="form-label">Año</label>
+              <input type="number" class="form-control" id="formYear" aria-describedby="">
+            </div>
+            <div class="mb-3 campoForm">
+              <label for="formDirector class="form-label">Director</label>
+              <input type="text" class="form-control" id="formDirector" aria-describedby="">
+            </div>
+            <div class="mb-3 campoForm">
+              <label for="formDuracion" class="form-label">Duración</label>
+              <input type="text" class="form-control" id="formDuracion" aria-describedby="">
+            </div>
+            <div class="mb-3 campoForm">
+              <label for="formGenre" class="form-label">Género</label>
+              <input type="text" class="form-control" id="formGenre" aria-describedby="">
+            </div>
+            <div class="mb-3 campoForm">
+              <label for="formRate" class="form-label">Puntuación</label>
+              <input type="number" class="form-control" id="formRate" aria-describedby="">
+            </div>
+            
+            <div class="mb-3 campoForm">
+              <label for="formImg" class="form-label">Imagen</label>
+              <input type="text" class="form-control" id="formImg" aria-describedby="">
+            </div>
+            
+            <button type="submit" class="btn btn-primary "> Subir </button>
+          </form>
+    </div>
 
     <footer class="bg-dark">
       <!-- <div id="redes">
