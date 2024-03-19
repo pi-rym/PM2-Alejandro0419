@@ -2,7 +2,7 @@ const Movie = require("../models/Movie");
 
 module.exports = {
   getMovies: async () => {
-    try {
+    try {// Para llamar movies con nombre especifico, Movie.find({name:'Nombre'})
       const movies = await Movie.find();
       return movies;
     } catch (error) {
