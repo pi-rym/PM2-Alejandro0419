@@ -13,7 +13,10 @@ async function getMovies() {
 
 async function postMovie() {
   try {
-    const {data} = await axios.post('http://localhost:3000/movies', document.querySelector('#formCreateMovie'))
+    const formCreate = document.getElementById('submitMovie');
+    const formData = new FormData(formCreate);
+    const data = await axios.post('http://localhost:3000/movies', formData);
+    console.log("Data del form enviada: " + data);
   } catch (error) {
     console.log("Ha ocurrido un error en la conexion al servidor.")
     console.log(error.message)
