@@ -42,34 +42,48 @@
             <div class="mb-3 campoForm">
               <label for="formYear" class="form-label">Año</label>
               <input type="number" class="form-control" id="formYear" aria-describedby="yearHelp" required>
-              <div id="yearHelp" class="form-text">Ingrese el año de la pelicula</div>
+              <div id="yearHelp" class="form-text">Ingresa el año de la película.</div>
             </div>
           </div>
           <div class="row">
             <div class="mb-3 campoForm">
-              <label for="formDirector class="form-label">Director</label>
-              <input type="text" class="form-control" id="formDirector" aria-describedby="">
+              <label for="formDirector" class="form-label">Director</label>
+              <input type="text" class="form-control" id="formDirector" aria-describedby="directorHelp" required>
+              <div id="directorHelp" class="form-text">Ingresa el nombre del director de la película.</div>
             </div>
             <div class="mb-3 campoForm">
               <label for="formDuracion" class="form-label">Duración</label>
-              <input type="text" class="form-control" id="formDuracion" aria-describedby="">
+              <input type="text" class="form-control" id="formDuracion" aria-describedby="duracionHelp">
+              <div id="duracionHelp" class="form-text">Ingresa la duración de la película.</div>
             </div>
           </div>
           <div class="row">
-            <div class="mb-3 campoForm">
+            <div class="mb-3 campoForm" id="containerGenre">
               <label for="formGenre" class="form-label">Género</label>
-              <input type="text" class="form-control" id="formGenre" aria-describedby="">
-            </div>
-            <div class="mb-3 campoForm">
-              <label for="formRate" class="form-label">Puntuación</label>
-              <input type="number" class="form-control" id="formRate" aria-describedby="">
-            </div>
-          </div>
+              <div>
+                <input type="checkbox" id="action" name="genre" value="Acción">
+                <label for="action">Acción</label>
+              </div>
+              <div>
+                <input type="checkbox" id="comedy" name="genre" value="Comedia">
+                <label for="comedy">Comedia</label>
+              </div>
+              <div>
+                <input type="checkbox" id="drama" name="genre" value="Drama">
+                <label for="drama">Drama</label>
+              </div>
               <div class="mb-3 campoForm">
-              <label for="formImg" class="form-label">Imagen</label>
-              <input type="text" class="form-control" id="formImg" aria-describedby="">
-            </div>            
-            <input class="btn btn-primary" type="submit" value="Subir">            
+                <label for="formRate" class="form-label">Puntuación</label>
+                <input type="number" class="form-control" id="formRate" aria-describedby="rateHelp" step="0.1" min="0" max="10" required>
+                <div id="rateHelp" class="form-text">Ingresa la puntuación de la película (entre 0 y 10).</div>
+              </div>
+          </div>
+          <div class="mb-3 campoForm">
+            <label for="formImg" class="form-label">Imagen</label>
+            <input type="text" class="form-control" id="formImg" aria-describedby="imgHelp">
+            <div id="imgHelp" class="form-text">Ingresa la URL de la imagen de la película.</div>
+          </div>         
+            <input id="submitMoviebtn" class="btn btn-primary" type="submit" value="Subir">            
             <input class="btn btn-primary" type="reset" value="Clear">
           </form>
     </div>

@@ -25,7 +25,7 @@ eval("const renderMovies = __webpack_require__(/*! ./renderMovies */ \"./scripts
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const dataToCards = __webpack_require__(/*! ./dataToCards */ \"./scripts/dataToCards.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\nasync function getMovies() {\r\n  try {\r\n    const data = await axios.get(\"http://localhost:3000/movies\");\r\n    dataToCards(data.data)\r\n  } catch (error) {\r\n    console.log(\"Ha ocurrido un error en la conexion a la api.\")\r\n    console.log(error.message)\r\n  }\r\n}\r\n/* \r\nPromesas:\r\n\r\nconst getFilms = ()=> {\r\n  axios.get(\"https://students-api.up.railway.app/movies\");\r\n  .then( ( {data} ) => data.forEach(dataToCards))\r\n}.catch((error)=> console.log(error.message))\r\n\r\n\r\nAsync Await\r\nconst getFilms = async ()=Z {\r\n  try {\r\n    const { data } = await axios.get\r\n    console.log (data)\r\n    data.forEach(renderfilms)\r\n  }\r\n  catch (error){\r\n    console.log(error.message)\r\n  }\r\n}\r\n*/\r\n\r\n/*   $.get(\"https://students-api.2.us-1.fl0.io/movies\", (data) =>\r\n    dataToCards(data)\r\n  ); \r\n*/\r\n\r\n  module.exports = getMovies;\r\n\n\n//# sourceURL=webpack://front/./scripts/handler.js?");
+eval("const dataToCards = __webpack_require__(/*! ./dataToCards */ \"./scripts/dataToCards.js\");\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\nasync function getMovies() {\r\n  try {\r\n    const data = await axios.get(\"http://localhost:3000/movies\");\r\n    dataToCards(data.data)\r\n  } catch (error) {\r\n    console.log(\"Ha ocurrido un error en la conexion al servidor.\")\r\n    console.log(error.message)\r\n  }\r\n}\r\n\r\nasync function postMovie() {\r\n  try {\r\n    const formCreate = document.getElementById('submitMovie');\r\n    const formData = new FormData(formCreate);\r\n    const data = await axios.post('http://localhost:3000/movies', formData);\r\n    console.log(\"Data del form enviada: \" + data);\r\n  } catch (error) {\r\n    console.log(\"Ha ocurrido un error en la conexion al servidor.\")\r\n    console.log(error.message)\r\n  }\r\n}\r\n\r\n  module.exports = {getMovies, postMovie};\r\n\n\n//# sourceURL=webpack://front/./scripts/handler.js?");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ eval("const dataToCards = __webpack_require__(/*! ./dataToCards */ \"./scripts/d
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const getMovies = __webpack_require__(/*! ./handler */ \"./scripts/handler.js\")\r\n\r\ngetMovies()\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const {getMovies, postMovie} = __webpack_require__(/*! ./handler */ \"./scripts/handler.js\")\r\n\r\ngetMovies()\r\n\r\n\r\nconst btnSubmit = document.getElementById('submitMoviebtn');\r\n\r\nbtnSubmit.addEventListener('click', postMovie)\r\n/* \r\n// en un dorucmento de js para create movie o submit movie:\r\n\r\ngetelementbyid de el boton submit\r\n\r\nboton addEventListener que llame a la funcion asyncrona postMovie del handler \r\n\r\n*/\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 
