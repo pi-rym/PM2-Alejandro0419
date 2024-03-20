@@ -9,10 +9,10 @@ server.use(morgan("dev")); //combined da mas informacion, para ver mas leer docu
 server.use(cors());
 server.use(express.json());
 
-server.use((req, res, next)=>{
+/* server.use((req, res, next)=>{
     console.log("Estamos pasando por el middleware propio");
     next();
-})
+}) */
 
 server.use(router)
 

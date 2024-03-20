@@ -29,8 +29,6 @@ async function postMovie(event) {
   };
 
   try {
-   /*  const response = await axios.post('http://localhost:3000/movies', new URLSearchParams(new FormData(document.getElementById('submitMovie'))));
-    console.log(response.data); */
     const data = await axios.post('http://localhost:3000/movies', movieData);
     console.log("Data del form enviada: " + data);
 
