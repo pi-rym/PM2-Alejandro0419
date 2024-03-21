@@ -49,8 +49,8 @@ nav{
 
 .movieImg{ /*imagen de la pelicula*/
     max-width: 300px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .movieTitle {
@@ -114,4 +114,9 @@ footer{
 
 .campoForm{
     width: 40%;
+}
+
+/* Form Crear peliculas */
+form{
+    margin: 15px;
 }
