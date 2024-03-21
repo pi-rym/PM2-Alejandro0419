@@ -28,9 +28,13 @@ async function postMovie(event) {
     poster: dataForm.get('poster'),
   };
 
+  // Validación de campos
+  if(![movieData.title, movieData.year, movieData.director, movieData.duration, movieData.genre, movieData.rate, movieData.poster].every(Boolean))  alert('Hay campos incompletos.')
+
   try {
     const data = await axios.post('http://localhost:3000/movies', movieData);
     console.log("Data del form enviada: " + data);
+    alert("Pelicula agregada correctamente.");
 
   } catch (error) {
     console.log("Ha ocurrido un error en la conexion al servidor. - postMovie")

@@ -1,5 +1,6 @@
 body{ 
     width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* background: #03273C; */
 /* background: linear-gradient(132deg, rgba(5,23,32,1) 0%, rgba(1,42,74,1) 45%, rgba(1,73,124,1) 100%); */
 }
@@ -21,8 +22,8 @@ nav{
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding-top: 20px;
 
 }
@@ -31,10 +32,12 @@ nav{
     width: 300px;
     height: auto;
     /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.226); */
+    box-shadow: 13px 9px 8px 0px rgba(0,0,0,0.67);
     border-radius: 15px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    margin: 5px;
     margin-bottom: 50px;
     padding-bottom: 10px;
     align-content: baseline;
